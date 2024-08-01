@@ -1,6 +1,5 @@
-#Errores de sintaxis
-
-##EventListener
+# Errores de sintaxis
+ 
 - Se enconetro mal escrito el seteo del event listener al input de submit, se el nombre correcto es addEventListerner. Corección:
 ```javascript
     guessSubmit.addEventListener('click', checkGuess);
@@ -15,8 +14,7 @@
   	  resetButton.addEventListener('click', resetGame);
 ```
 
-#Errores de negocio
-##Logicos
+# Errores de negocio 
 
 - No existe validacion para caracteres que no sean un numeros, ni tampoco validacion para asegurar que el numero ingresado sea un entero. Corrección:
 ```javascript
