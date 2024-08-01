@@ -41,8 +41,8 @@
 </body>
 
 <script>
-  let randomNumber = Math.floor(Math.random() * 100);
-  console.log(randomNumber); 
+  let randomNumber = Math.floor(Math.random() * 100); 
+  const ATTEMPS = 10;
   const guesses = document.querySelector('.guesses');
   const lastResult = document.querySelector('.lastResult');
   const lowOrHi = document.querySelector('.lowOrHi');
@@ -55,7 +55,7 @@
   function checkGuess() {
 
     let userGuess = guessField.value;
-     
+    
     if( isNaN(Number(userGuess)) || userGuess === ""){
       lastResult.textContent = 'Debes ingresar un valor numerico! ';
       lastResult.style.backgroundColor = 'red';
