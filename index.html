@@ -62,6 +62,9 @@
     }else if(!Number.isInteger(Number(userGuess))){
       lastResult.textContent = 'Debes ingresar un número entero! ';
       lastResult.style.backgroundColor = 'red';
+    }else if(Number(userGuess) < 1 || Number(userGuess) > 100){
+      lastResult.textContent = 'Debes ingresar un numero de 1 a 100';
+      lastResult.style.backgroundColor = 'red';
     }else if(Number(userGuess) === randomNumber) {
       lastResult.textContent = 'Felicitaciones! adivinaste el número!';
       lastResult.style.backgroundColor = 'green';
