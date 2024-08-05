@@ -32,6 +32,15 @@
     let randomNumber = Math.floor(Math.random() * 100)+1;
 ```
 
+- No se valida si el numero esta entre el rango correcto (1 a 100). Corección:
+```javascript
+      // Validaciones previas
+    }else if(Number(userGuess) < 1 || Number(userGuess) > 100){
+      lastResult.textContent = 'Debes ingresar un numero de 1 a 100';
+      lastResult.style.backgroundColor = 'red';
+    }
+```
+
 - La constante de intentos esta establecida en 5, no en 10 como lo ocupa el requerimento. Corección:
 ```javascript
     const ATTEMPS = 10;
@@ -103,6 +112,10 @@
 
 - La logica para mostrar si estoy cerca del numero correcto  no muestra el texto correcto y compara tipos de datos distitintos, por lo que siempre sera falso. Corrección:
 ```javascript 
-    randomNumber = Math.floor(Math.random() * 100)+1;
+    if(Number(userGuess) < randomNumber) {
+      lowOrHi.textContent = 'Incorrecto! El número es mayor!';
+    } else if(Number(userGuess)  >randomNumber) {
+      lowOrHi.textContent = 'Incorrecto! El número es menor!';
+    }
 ```
     
